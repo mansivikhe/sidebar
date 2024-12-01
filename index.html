@@ -1,0 +1,129 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            color:aliceblue;
+            font-size: 20px;
+        }
+        .sidebar{
+            background-color: gray;
+            height: 100vh;
+            width: 14%;
+           
+            visibility: hidden;
+        }
+        .sid1{
+            color: white;
+            font-size: 30px;
+            margin-bottom: 5px;
+            margin-top: 10px;
+            margin-left: 8px;
+            padding-left: 6px;
+
+        }
+        
+        .cross{
+            margin-left:120px;
+            size:20px;
+            
+        }
+        a{
+            text-decoration: none;
+
+        }
+        .menu-item{
+            text-align: justify;
+           margin-left: 10px;
+           margin-bottom: 20px;
+        }
+        .menu-item1{
+            margin-top: 140px;
+            text-align: justify;
+           margin-left: 10px;
+           margin-bottom: 20px;
+        }
+        .menu-item2{
+            
+            text-align: justify;
+           margin-left: 10px;
+           margin-bottom: 20px;
+        }
+        #hahaha{
+            color: black;
+        visibility: inherit;
+        }
+    </style>
+</head>
+<body>
+    <i class="fa-solid fa-bars "  id='hahaha' onclick="opensidebar()"></i>
+    
+    <div class="sidebar" id="sidebar">
+        <i class="fa-brands fa-dropbox sid1"></i>
+      
+        <i class="fa-solid fa-circle-xmark cross" onclick="closesidebar()"></i>
+        <hr>
+        <div class="menu-item">
+            <i class="fa-solid fa-gauge"></i>
+            <a href="#" class="menu-text">Dashboard</a>
+        </div>
+        <div class="menu-item">
+            <i class="fa-solid fa-calendar-days"></i>
+            <a href="#" class="menu-text">Calendar</a>
+        </div>
+        <div class="menu-item">
+            <i class="fa-regular fa-bell"></i>
+            <a href="#" class="menu-text">Notifications</a>
+        </div>
+        <div class="menu-item">
+            <i class="fa-solid fa-users"></i>
+            <a href="#" class="menu-text">Team</a>
+        </div>
+        <div class="menu-item">
+            <i class="fa-regular fa-star"></i>
+            <a href="#" class="menu-text">Bookmarks</a>
+
+        </div>
+        <div class="menu-item">
+            <i class="fa-solid fa-shield-halved"></i>
+            <a href="#" class="menu-text">Settting</a>
+            
+        </div>
+        
+        <div class="menu-item1"><hr><br>
+            <i class="fa-regular fa-circle-user"></i>
+            <a href="#" class="menu-text">Profile</a>
+            <hr>
+        </div>
+        <div class="menu-item2">
+            <i class="fa-solid fa-right-from-bracket"></i>
+            <a href="#" class="menu-text">logout</a>
+            
+        </div><hr>
+
+    </div>
+    <script src="https://kit.fontawesome.com/f09217f04e.js" crossorigin="anonymous">
+
+    </script>
+    <script>
+        function opensidebar()
+        {
+            const sidebarelement = document.getElementById("sidebar");
+            sidebarelement.style.visibility='visible';
+            const hamelem = document.getElementById("hahaha");
+            hamelem.style.visibility='hidden';
+        }
+        function closesidebar()
+        {
+            const sidebarelement = document.getElementById("sidebar");
+            sidebarelement.style.visibility='hidden';
+            const hamelem = document.getElementById("hahaha");
+            hamelem.style.visibility='visible';
+        }
+    </script>
+</body>
+</html>
